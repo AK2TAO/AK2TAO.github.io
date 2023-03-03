@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>真正学会用jupyter</title>
+      <link href="/post/3010dfa5.html"/>
+      <url>/post/3010dfa5.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><blockquote><p>数据分析为什么常用 Jupyter 而不是直接使用 Python 脚本或 Excel?</p></blockquote><h2 id="jupyter-的优势"><a href="#jupyter-的优势" class="headerlink" title="jupyter 的优势"></a>jupyter 的优势</h2><ul><li>无需 IDE，一个浏览器搞定</li><li>互式开发和直观的数据展示</li><li>叙述性文本的特性让其直接变成展示文档</li><li>多种类型变化，可直接转换成 python，md 等类型文件</li><li>完全免费</li><li>还支持 R 语言</li></ul><p>最主要的优势就是交互式开发和实时展示功能</p><p>这基本上能保证每一步的结果都是正确可靠的</p><p>这对于数据分析尤为重要,因为中间只要写错一步,最后的结果可能跟真实结果大相径庭</p><p>同时 jupyter 还可以远程连接云服务做大数据,甚至深度学习</p><h2 id="食用建议"><a href="#食用建议" class="headerlink" title="食用建议"></a>食用建议</h2><ol><li>首先熟练适用键盘,确定自己打字没问题,键盘的效率比鼠标高得不是一星半点</li><li>最好先学习一下 Markdown 语法, 对于做笔记来说实在是太好用了! 在我的其他文章里有教程,只需要花十几二十分钟就会用了</li></ol><h1 id="jupyter-使用"><a href="#jupyter-使用" class="headerlink" title="jupyter 使用"></a>jupyter 使用</h1><h2 id="命令模式"><a href="#命令模式" class="headerlink" title="命令模式"></a>命令模式</h2><p>jupyter 里有<code>命令模式</code>和<code>编辑模式</code></p><p><img src="D:\AK2TAO\pic-bed\teach\teach1.png" alt="image-20230303172001687"></p><p>命令模式下 <code>代码块</code>左边显示为蓝色</p><p>编辑模式变为命令模式需要按下 键盘左上角的<code>ESC</code>键</p><p>我们可以使用很多快捷键</p><p>例如</p><ul><li><code>dd</code>:删除当前代码块</li><li><code>b</code>:在下方添加一个代码块</li><li><code>a</code>:在上方添加一个代码块</li><li><code>m</code>:将编程语言变为 Markdown 代码块</li><li><code>y</code>:将 Markdown 代码块变为编程语言代码块</li></ul><p>上下<code>代码块</code>的切换可以使用方向键<code>↑</code> <code>↓</code>也可以使用<code>j</code> <code>k</code>键,<code>j</code> 上移, <code>k</code> 下移</p><p>快捷键记不住没有关系</p><p>在命令模式下按<code>H</code>键,显示提示</p><p><img src="D:\AK2TAO\pic-bed\teach\teach2.png" alt="image-20230303172923708"></p><h2 id="编辑模式"><a href="#编辑模式" class="headerlink" title="编辑模式"></a>编辑模式</h2><p>编辑模式下 <code>代码块</code>左边显示为绿色</p><p>可以自由输入代码</p><p>命令模式进入编辑模式需要按下 回车键<code>Enter</code></p><p><img src="D:\AK2TAO\pic-bed\teach\teach3.png" alt="image-20230303172346658"></p><h2 id="实际案例"><a href="#实际案例" class="headerlink" title="实际案例"></a>实际案例</h2><p>你可能会认为: 就这? 这也快不了多少呀</p><p>那我就简单的举个栗子:</p><blockquote><p>查找替换变量</p></blockquote><p><img src="D:\AK2TAO\pic-bed\teach\teach4.png" alt="image-20230303173442672"></p><p>例如我想把这里面的<code>ar_y</code>变量改个名字, 正常思维肯定是一个个找</p><p>但是那样未免效率太低了吧</p><p>假如这是个大型文件, 老板要你换个东西, 这一个个找多浪费时间!</p><p>这时候可以使用我们的快捷键了</p><p>命令模式下按下<code>f</code>, 重要的事情说三遍! 是命令模式下! 命令模式下! 命令模式下!</p><p>会给我们一个功能</p><p><img src="D:\AK2TAO\pic-bed\teach\teach5.png" alt="image-20230303173734590"></p><p>我想不用我解释各位童鞋都应该知道是干嘛的了吧</p><p><img src="D:\AK2TAO\pic-bed\teach\teach6.png" alt="image-20230303173915985"></p><p>这样几分钟就能解决了</p><p>当然我讲的只是 jupyter 功能的冰山一角</p><p>如果想要更快的提高效率,童鞋们可以自己去查看文档</p><h1 id="结尾"><a href="#结尾" class="headerlink" title="结尾"></a>结尾</h1><p>这里什么都没有, 单纯就是为了水个结尾! love &amp;&amp; peace !</p><p><img src="D:\AK2TAO\pic-bed\teach\teach7.jpg" alt="image-20230303173915985"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>机器学习代码全收录</title>
       <link href="/post/2d82a014.html"/>
       <url>/post/2d82a014.html</url>
