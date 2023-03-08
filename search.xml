@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>sklearn.datasets.fetch_20newsgroups下载报错的问题</title>
+      <link href="/post/ad8f31d7.html"/>
+      <url>/post/ad8f31d7.html</url>
+      
+        <content type="html"><![CDATA[<h1 id="下载报错的问题"><a href="#下载报错的问题" class="headerlink" title="下载报错的问题"></a>下载报错的问题</h1><h2 id="报错"><a href="#报错" class="headerlink" title="报错"></a>报错</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">forbidden <span class="number">403</span></span><br></pre></td></tr></table></figure><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol><li>手动下载正确的安装包</li></ol><p><code>https://ndownloader.figshare.com/files/5975967</code></p><ol start="2"><li>在我的电脑<br>C:\Users(你的 user_name)\scikit_learn_data\20news_home 目录下，将下载好的压缩包拖进去（如果之前没有的需要自己手动创建）</li><li>python 下载的文件叫<strong>20new-sbydate.tar.gz，</strong>自己下载的叫<strong>20newsbydate.tar.gz</strong>，所以需要改文件名字；</li></ol><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine1.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>改成-&gt;</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine2.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>中间的<code>-</code>一定看清楚!!!</p><ol start="4"><li>通过 D:你的项目下<code>\venv\Lib\site-packages\sklearn\datasets</code>找到其中的 <strong>twenty_newsgroups.py</strong>，打开进行如下的修改</li></ol><h3 id="python"><a href="#python" class="headerlink" title="python"></a>python</h3><p>如果用本机<code>python</code>就找 python 的安装目录</p><p>打开文件位置</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine3.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>这里打开的只是快捷方式, 再从快捷方式找到实际文件位置</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine4.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>再按流程来</p><h3 id="jupyter"><a href="#jupyter" class="headerlink" title="jupyter"></a>jupyter</h3><p>如果用的<code>jupyter</code></p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine5.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>之后流程和<code>python</code>一样</p><h3 id="修改文件"><a href="#修改文件" class="headerlink" title="修改文件"></a>修改文件</h3><p>查找<strong>twenty_newsgroups.py</strong>, 文件有多个需要仔细看</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine6.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>找到<code>download_20newsgroups</code>函数</p><p>注释掉<code>logger.info(&quot;Downloading dataset from %s (14 MB)&quot;, ARCHIVE.url)</code>到<code>#os.remove(archive_path)</code>的五句话</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine7.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>再添加</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">archive_path = <span class="string">&quot;C:/Users/(你的用户名)/scikit_learn_data/20news_home/20news-bydate.tar.gz&quot;</span></span><br><span class="line">logger.debug(<span class="string">&quot;Decompressing %s&quot;</span>, archive_path)</span><br><span class="line">tarfile.<span class="built_in">open</span>(archive_path, <span class="string">&quot;r:gz&quot;</span>).extractall(path=target_dir)</span><br><span class="line">os.remove(archive_path)</span><br></pre></td></tr></table></figure><p>注意：archive_path 是刚才放那个压缩包的路径</p><p>至此，便可以再次运行程序，可以成功运行<br>压缩文件变成了</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine8.png" alt="machine1.png (632×159) (wuzhentao.com)"></p><p>发现没有报错</p><p><img src="https://picbed.wuzhentao.com/%E4%BD%9C%E4%B8%9A/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/machine9.png" alt="machine1.png (632×159) (wuzhentao.com)"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 杂谈 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>真正学会用jupyter</title>
       <link href="/post/3010dfa5.html"/>
       <url>/post/3010dfa5.html</url>
