@@ -1,0 +1,244 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>JAVA教程 | Abstract1on的博客</title><meta name="author" content="Abstract1on"><meta name="copyright" content="Abstract1on"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="前言JAVA的三大版本JAVA最大的特点： Java的主要优势在于其做出的WORA：即一次编写（Write Once）、随处运行（Run Anywhere）。简 单来讲，这意味着开发团队能够利用Java编写一款应用程序，并将其编译为可执行形式，而后将其运行 在任何支持Java的平台之上。这显然能够极大提高编程工作的实际效率，这种优势来源于Java Virtual Machine(JAVA虚拟机的缩">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JAVA教程">
+<meta property="og:url" content="http://example.com/post/7b64386an.html">
+<meta property="og:site_name" content="Abstract1on的博客">
+<meta property="og:description" content="前言JAVA的三大版本JAVA最大的特点： Java的主要优势在于其做出的WORA：即一次编写（Write Once）、随处运行（Run Anywhere）。简 单来讲，这意味着开发团队能够利用Java编写一款应用程序，并将其编译为可执行形式，而后将其运行 在任何支持Java的平台之上。这显然能够极大提高编程工作的实际效率，这种优势来源于Java Virtual Machine(JAVA虚拟机的缩">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png">
+<meta property="article:published_time" content="2023-02-24T06:37:32.477Z">
+<meta property="article:modified_time" content="2023-03-09T10:37:47.258Z">
+<meta property="article:author" content="Abstract1on">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png"><link rel="shortcut icon" href="/img/touxiang.png"><link rel="canonical" href="http://example.com/post/7b64386an.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Abstract1on","link":"链接: ","source":"来源: Abstract1on的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'JAVA教程',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-03-09 18:37:47'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/hongxia2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-hand-o-down"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Abstract1on的博客"><span class="site-name">Abstract1on的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-hand-o-down"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">JAVA教程</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-02-24T06:37:32.477Z" title="发表于 2023-02-24 14:37:32">2023-02-24</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-03-09T10:37:47.258Z" title="更新于 2023-03-09 18:37:47">2023-03-09</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E6%8A%80%E6%9C%AF/">技术</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">2.2k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>6分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="JAVA教程"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><h2 id="JAVA的三大版本"><a href="#JAVA的三大版本" class="headerlink" title="JAVA的三大版本"></a>JAVA的三大版本</h2><p><strong>JAVA最大的特点：</strong></p>
+<p>Java的主要优势在于其做出的WORA：即一次编写（Write Once）、随处运行（Run Anywhere）。简 单来讲，这意味着开发团队能够利用Java编写一款应用程序，并将其编译为可执行形式，而后将其运行 在任何支持Java的平台之上。这显然能够极大提高编程工作的实际效率，这种优势来源于Java Virtual Machine(JAVA虚拟机的缩写)，JVM是一种用于计算设备的规范，它是一个虚构出来的计算机，是通过在 实际的计算机上仿真模拟各种计算机功能来实现的。JAVA语言的一个非常重要的特点就是与平台的无关 性，而使用Java虚拟机是实现这一特点的关键。</p>
+<p><strong>JAVA的三大版本：</strong></p>
+<ol>
+<li>JAVA SE：它是JAVA的标准版，是整个JAVA的基础和核心，这是我们主要学习的一个部分，也是 JAVAEE和JAVAME技术的基础，主要用于开发桌面应用程序。学会后可以做一些简单的桌面应用 如：扫雷，连连看等。 </li>
+<li>JAVA ME：它是JAVA的微缩版，主要应用于嵌入式开发，比如手机程序的开发。目前来说就业范围 不是很广，在一些城市可能相对的不好找工作。 </li>
+<li>JAVA EE：也叫JAVA的企业版，它提供了企业级应用开发的完整解决方案，比如开发网站，还有企 业的一些应用系统，是JAVA技术应用最广泛的领域。主要还是偏向于WEB的开发，而JAVA EE的基 础就是JAVA SE，所以我们在学习JAVA SE的时候，基础一定要打好，因为这是最基本的，也是最核 心的。</li>
+</ol>
+<p><img src="https://picbed.wuzhentao.com/blog/java1.png" alt="p1.png (3840×2160) (wuzhentao.com)"></p>
+<h2 id="JDK-和-KRE"><a href="#JDK-和-KRE" class="headerlink" title="JDK 和 KRE"></a>JDK 和 KRE</h2><p>**JDK: **</p>
+<p>Java 2 SDK (Development Kit)包含：JRE的超集，包含编译器和调试器等用于程序开发的文件</p>
+<p><strong>JRE:</strong></p>
+<p>Java Runtime Environment (JRE) 包含：Java虚拟机、库函数、运行Java应用程序和Applet所必须文件</p>
+<p>Java运行环境的三项主要功能：</p>
+<ul>
+<li>加载代码: 由class loader完成</li>
+<li>校验代码：由bytecode verifier 完成； </li>
+<li>执行代码：由 runtime interpreter完成。</li>
+</ul>
+<p><strong>区别和联系</strong></p>
+<p>sdk（也就是jdk）是jre的超集，是在jre的基础上增加了编译器及其他一些开发工具。 </p>
+<p>jre就是java运行时环境，包括了jvm和其它一些java核心api,任何一台电脑，只有安装了jre才可以运行 java程序. </p>
+<p>如果只是要运行JAVA程序，之需要JRE就可以。 </p>
+<p>JRE通常非常小，也包含了JVM. 如果要开发JAVA程序，就需要安装JDK。</p>
+<h2 id="初时JVM-JAVA-Virtual-Machine"><a href="#初时JVM-JAVA-Virtual-Machine" class="headerlink" title="初时JVM(JAVA Virtual Machine)"></a>初时JVM(JAVA Virtual Machine)</h2><p>JVM是一种规范，可以使用软件来实现，也可以使用硬件来实现，就是一个虚拟的用于执行bytecodes 字节码的计算机。他也定义了指令集、寄存器集、结构栈、垃圾收集堆、内存区域。</p>
+<p> JVM负责将java字节码解释运行，边解释边运行，这样，速度就会受到一定的影响。JAVA提供了另一种 解释运行的方法JIT（just in time），可以一次解释完，再运行特定平台上的机器码，高级的JIT可以只能 分析热点代码，并将这些代码转成本地机器码，并将结果缓存起来，下次直接从内存中调用，这样就大 大提高了执行JAVA代码的效率。这样就实现了跨平台、可移植的功能。</p>
+<ol>
+<li>. JVM是指在一台计算机上由软件或硬件模拟的计算机；它类似一个小巧而高效的CPU。</li>
+<li>byte-code代码是与平台无关的是虚拟机的机器指令。</li>
+<li>. java字节代码运行的两种方式:</li>
+</ol>
+<ul>
+<li>方式interpreter(解释)</li>
+<li>Just-in-time(即时编译):由代码生成器将字节代码转换成本机的机器代码,然后可以以较高速度执行。</li>
+<li>JAVA的跨平台实现的核心是不同平台使用不同的虚拟机 不同的操作系统有不同的虚拟机。</li>
+<li>Java 虚拟机机制屏蔽了底层运行平台的差别，实现了“一次编译，随处 运行”</li>
+</ul>
+<h2 id="编写-Java-程序时，应注意以下几点："><a href="#编写-Java-程序时，应注意以下几点：" class="headerlink" title="编写 Java 程序时，应注意以下几点："></a>编写 Java 程序时，应注意以下几点：</h2><ul>
+<li><strong>大小写敏感：</strong>Java 是大小写敏感的，这就意味着标识符 Hello 与 hello 是不同的。 </li>
+<li><strong>类名：</strong>对于所有的类来说，类名的首字母应该大写。如果类名由若干单词组成，那么每个单词的首 字母应该大写，例如 MyFirstJavaClass 。 </li>
+<li><strong>方法名：</strong>所有的方法名都应该以小写字母开头。如果方法名含有若干单词，则后面的每个单词首字 母大写。 </li>
+<li><strong>源文件名：</strong>源文件名必须和类名相同。当保存文件的时候，你应该使用类名作为文件名保存（切记 Java 是大小写敏感的），文件名的后缀为 .java。（如果文件名和类名不相同则会导致编译错 误）。 </li>
+<li><strong>主方法入口：</strong>所有的 Java 程序由<code> public static void main(String []args)</code> 方法开始执行。</li>
+</ul>
+<h2 id="JAVA程序运行机制"><a href="#JAVA程序运行机制" class="headerlink" title="JAVA程序运行机制"></a>JAVA程序运行机制</h2><p>计算机的高级编程语言类型: 编译型 ，解释型. Java 语言是两种类型的结合；</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//从字面上看，“编译”和“解释”的确都有“翻译”的意思，它们的区别则在于翻译的时机安排不大一样。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//我们先看看编译型:有一个负责翻译的程序来对我们的源代码进行转换，生成相对应的可执行代码。这个过程说得专业一点，就称为编译（Compile），而负责编译的程序自然就称为编译器Compiler）。就类似于把一本中文书直接翻译成英文版进行出售。</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//现在再看看解释型：打个比方：假如你打算阅读一本外文书，而你不知道这门外语，那么你可以找一名翻译，给他足够的时间让他从头到尾把整本书翻译好，然后把书的母语版交给你阅读（编译型）；或者，你也立刻让这名翻译辅助你阅读，让他一句一句给你翻译，如果你想往回看某个章节，他也得重新给你翻译。（解释型）</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//编译型与解释型，两者各有利弊。前者由于程序执行速度快，同等条件下对系统要求较低，因此像开发操作系统、大型应用程序、数据库系统等时都采用它，像C/C++、Pascal/ObjectPascal（Delphi）、VB等基本都可视为编译语言，而一些网页脚本、服务器脚本及辅助开发接口这样的对速度要求不高、对不同系统平台间的兼容性有一定要求的程序则通常使用解释性语言，如Java、JavaScript、VBScript、Perl、Python等等。</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//Java语言虽然比较接近解释型语言的特征，但在执行之前已经预先进行一次预编译，生成的代码是介于机器码和Java源代码之间的中介代码，运行的时候则由JVM（Java的虚拟机平台，可视为解释器）解释执行。它既保留了源代码的高抽象、可移植的特点，又已经完成了对源代码的大部分预编译工作，所以执行起来比“纯解释型”程序要快许多。</span></span><br><span class="line">    </span><br><span class="line"><span class="comment">//总之，随着设计技术与硬件的不断发展，编译型与解释型两种方式的界限正在不断变得模糊。</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>第一步:编译</strong></p>
+<p>利用编译器(javac)源程序编译成字节码,字节码文件名：源文件名.class</p>
+<p><strong>第二步:运行</strong></p>
+<p>利用虚拟机（解释器，java）解释执行class字节码文件。</p>
+<p><img src="https://picbed.wuzhentao.com/blog/java2.png"></p>
+<h1 id="JAVA基础"><a href="#JAVA基础" class="headerlink" title="JAVA基础"></a>JAVA基础</h1><h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>注释并不会被执行，是给我们写代码的人看的，书写注释是一个非常好的习惯，在很多大公司都是强制 要求各位去进行编写注释！。</p>
+<p>我们来看一下Java中的注释怎么写，看以下代码：</p>
+<p>java中的注释有三种:</p>
+<p><strong>单行注释:</strong></p>
+<p>只能注释当前行, 以<code>//</code>开始,知道行结束</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//输出HelloWorld</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>多行注释:</strong></p>
+<p>注释一段文字,以<code>/*</code>开始,<code>*/</code>结束!</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">多行</span></span><br><span class="line"><span class="comment">注释</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>文档注释:</strong></p>
+<p>用于生产API文档, 配合javaDoc</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* @Description HelloWorld类</span></span><br><span class="line"><span class="comment">* @Author Diamond 吴稳健QQ:1023217219</span></span><br><span class="line"><span class="comment">**/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<p><strong>注意:</strong></p>
+<p>平时写代码一定要注意注释的规范性，一个好的程序员，一定是有非常良好的编码习惯 的，我希望大家能够从小事开始锻炼自己的行为习惯！</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">吴稳健</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/7b64386an.html">http://example.com/post/7b64386an.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Abstract1on的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/hongxia2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Abstract1on</div><div class="author-info__description">バンド</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/AK2TAO" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1023217219@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：w1023217219</p> <p align="center">QQ号：1023217219</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#JAVA%E7%9A%84%E4%B8%89%E5%A4%A7%E7%89%88%E6%9C%AC"><span class="toc-number">1.1.</span> <span class="toc-text">JAVA的三大版本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JDK-%E5%92%8C-KRE"><span class="toc-number">1.2.</span> <span class="toc-text">JDK 和 KRE</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%9D%E6%97%B6JVM-JAVA-Virtual-Machine"><span class="toc-number">1.3.</span> <span class="toc-text">初时JVM(JAVA Virtual Machine)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%BC%96%E5%86%99-Java-%E7%A8%8B%E5%BA%8F%E6%97%B6%EF%BC%8C%E5%BA%94%E6%B3%A8%E6%84%8F%E4%BB%A5%E4%B8%8B%E5%87%A0%E7%82%B9%EF%BC%9A"><span class="toc-number">1.4.</span> <span class="toc-text">编写 Java 程序时，应注意以下几点：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#JAVA%E7%A8%8B%E5%BA%8F%E8%BF%90%E8%A1%8C%E6%9C%BA%E5%88%B6"><span class="toc-number">1.5.</span> <span class="toc-text">JAVA程序运行机制</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#JAVA%E5%9F%BA%E7%A1%80"><span class="toc-number">2.</span> <span class="toc-text">JAVA基础</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A8%E9%87%8A"><span class="toc-number">2.1.</span> <span class="toc-text">注释</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/ad8f31d7.html" title="sklearn.datasets.fetch_20newsgroups下载报错的问题"><img src="https://picbed.wuzhentao.com/%E8%99%B9%E5%A4%8F/hongxia.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="sklearn.datasets.fetch_20newsgroups下载报错的问题"/></a><div class="content"><a class="title" href="/post/ad8f31d7.html" title="sklearn.datasets.fetch_20newsgroups下载报错的问题">sklearn.datasets.fetch_20newsgroups下载报错的问题</a><time datetime="2023-03-08T06:26:59.355Z" title="发表于 2023-03-08 14:26:59">2023-03-08</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/3010dfa5.html" title="真正学会用jupyter"><img src="https://picbed.wuzhentao.com/%E8%99%B9%E5%A4%8F/1295496.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="真正学会用jupyter"/></a><div class="content"><a class="title" href="/post/3010dfa5.html" title="真正学会用jupyter">真正学会用jupyter</a><time datetime="2023-03-03T09:47:49.804Z" title="发表于 2023-03-03 17:47:49">2023-03-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/2d82a014.html" title="机器学习代码全收录"><img src="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习代码全收录"/></a><div class="content"><a class="title" href="/post/2d82a014.html" title="机器学习代码全收录">机器学习代码全收录</a><time datetime="2023-02-28T07:49:10.303Z" title="发表于 2023-02-28 15:49:10">2023-02-28</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/498ab7d9.html" title="机器学习"><img src="https://picbed.wuzhentao.com/%E4%B9%90%E9%98%9F/p5.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="机器学习"/></a><div class="content"><a class="title" href="/post/498ab7d9.html" title="机器学习">机器学习</a><time datetime="2023-02-26T05:34:19.965Z" title="发表于 2023-02-26 13:34:19">2023-02-26</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/7b64386an.html" title="JAVA教程"><img src="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="JAVA教程"/></a><div class="content"><a class="title" href="/post/7b64386an.html" title="JAVA教程">JAVA教程</a><time datetime="2023-02-24T06:37:32.477Z" title="发表于 2023-02-24 14:37:32">2023-02-24</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Abstract1on</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我希望你成为你自己的太阳，不必依靠谁的光。<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
