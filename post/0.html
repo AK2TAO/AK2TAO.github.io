@@ -1,0 +1,249 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>Abstract1on的博客 | Abstract1on的博客</title><meta name="author" content="Abstract1on"><meta name="copyright" content="Abstract1on"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="MongoDB 教程  MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  MongoDB简介 什么是MongoDB？   MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。 在">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Abstract1on的博客">
+<meta property="og:url" content="http://example.com/post/0.html">
+<meta property="og:site_name" content="Abstract1on的博客">
+<meta property="og:description" content="MongoDB 教程  MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。 MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。  MongoDB简介 什么是MongoDB？   MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。 在">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://picbed.wuzhentao.com/%E5%90%8E%E8%97%A4/p1.png">
+<meta property="article:published_time" content="2023-05-25T13:18:23.320Z">
+<meta property="article:modified_time" content="2023-05-25T13:18:02.896Z">
+<meta property="article:author" content="Abstract1on">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://picbed.wuzhentao.com/%E5%90%8E%E8%97%A4/p1.png"><link rel="shortcut icon" href="/img/touxiang.png"><link rel="canonical" href="http://example.com/post/0.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: {"limitDay":365,"position":"top","messagePrev":"It has been","messageNext":"days since the last update, the content of the article may be outdated."},
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: true,
+    post: true
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Abstract1on","link":"链接: ","source":"来源: Abstract1on的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'Abstract1on的博客',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-05-25 21:18:02'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.css" /><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/img/hongxia2.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-hand-o-down"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://picbed.wuzhentao.com/%E5%90%8E%E8%97%A4/p1.png')"><nav id="nav"><span id="blog-info"><a href="/" title="Abstract1on的博客"><span class="site-name">Abstract1on的博客</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw fa fa-hand-o-down"></i><span> 清单</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><i class="fa-fw fas fa-music"></i><span> 音乐</span></a></li><li><a class="site-page child" href="/Gallery/"><i class="fa-fw fas fa-images"></i><span> 照片</span></a></li><li><a class="site-page child" href="/movies/"><i class="fa-fw fas fa-video"></i><span> 电影</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/comments/"><i class="fa-fw fas fa-envelope-open"></i><span> 留言板</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">无题</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-05-25T13:18:23.320Z" title="发表于 2023-05-25 21:18:23">2023-05-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-05-25T13:18:02.896Z" title="更新于 2023-05-25 21:18:02">2023-05-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-wordcount"><i class="far fa-file-word fa-fw post-meta-icon"></i><span class="post-meta-label">字数总计:</span><span class="word-count">1.5k</span><span class="post-meta-separator">|</span><i class="far fa-clock fa-fw post-meta-icon"></i><span class="post-meta-label">阅读时长:</span><span>5分钟</span></span><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="MongoDB-教程"><a href="#MongoDB-教程" class="headerlink" title="MongoDB 教程"></a>MongoDB 教程</h1><p><img src="https://picbed.wuzhentao.com/MongoDBimage/mongodb-logo.png" alt="mongodb-logo"></p>
+<ul>
+<li>MongoDB 是一个基于分布式文件存储的数据库。由 C++ 语言编写。旨在为 WEB 应用提供可扩展的高性能数据存储解决方案。</li>
+<li>MongoDB 是一个介于关系数据库和非关系数据库之间的产品，是非关系数据库当中功能最丰富，最像关系数据库的。</li>
+</ul>
+<h2 id="MongoDB简介"><a href="#MongoDB简介" class="headerlink" title="MongoDB简介"></a>MongoDB简介</h2><blockquote>
+<p>什么是MongoDB？</p>
+</blockquote>
+<ul>
+<li>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。</li>
+<li>在高负载的情况下，添加更多的节点，可以保证服务器性能。</li>
+<li>MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。</li>
+<li>MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</li>
+</ul>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/crud-annotated-document.png" alt="crud-annotated-document"></p>
+<h1 id="window安装MongoDB"><a href="#window安装MongoDB" class="headerlink" title="window安装MongoDB"></a>window安装MongoDB</h1><p><strong>MongoDB安装包括两部分，一个是将MongoDB的服务下载下来并且安装到自己电脑；</strong></p>
+<p><strong>一个是可视化界面</strong>（<strong>解释：你下了MongoDB服务当然要用起来啊，固然你可以使用命令行的客户端，但是建议你安装MongoDB Compass可视化界面，用起来很方便</strong>）   </p>
+<p> 进入页面 <a target="_blank" rel="noopener" href="https://www.mongodb.com/download-center/community">https://www.mongodb.com/download-center/community </a>，我安装这个版本</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E4%B8%8B%E8%BD%BD%E9%80%89%E9%A1%B9.PNG" alt="下载选项"></p>
+<p>下载好后的文件:</p>
+<p><img src="https://img-blog.csdnimg.cn/20200405141118829.png" alt="img"></p>
+<p>  双击开始安装（以下几步注意，其他全部next）：</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E5%AE%89%E8%A3%85.PNG" alt="安装"></p>
+<p> 这里我选择的是自定义安装，选择你想安装到的位置</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE.PNG" alt="文件位置"></p>
+<p> 点击ok，然后点击next 点击之后 新版的Mongodb会主动在安装目录下创建log和data文件，这相比较早期版本有了改善 ，早期需要自己手动创建 <strong>但我们仍然需要在data下创建db文件夹  笔者的在C:\MongoDB\data\db（记住一定要再建个db文件夹）</strong></p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E5%88%9B%E5%BB%BA.PNG" alt="创建"></p>
+<p><strong>重重之重（下图一定要取消安装，compass客户端可视化界面我会另外下载。你要是选中了，那就是安装了一天也完成不了）</strong></p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E5%8F%96%E6%B6%88.PNG" alt="取消"></p>
+<p> <strong>最后安装成功会弹出一个警告框，选中 Ignore 就好</strong></p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E7%A1%AE%E8%AE%A4.PNG" alt="确认"></p>
+<p><strong>配置环境变量</strong></p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.PNG" alt="环境变量"></p>
+<p>至此，MongoDB客户端已经安装完毕</p>
+<p>由于我们已经创建了C:\MongoDB\data\db文件夹  这里就不需要再创建  否者还要创建  然后在cmd进入C:\MongoDB\bin目录下（在windows资源管理器中shift+右键打开powershell也行）然后执行mongod -dbpath C:\MongoDB\data\db 命令  如下图（这条命令是开启服务，它会一直运行，只要你要使用Mongodb，这个窗口就不能关）</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E6%89%A7%E8%A1%8C.PNG" alt="执行"></p>
+<p>已经启动了MongoDB服务</p>
+<p>但是我们需要Mongo.exe这个文件连接到MongoDB数据库,</p>
+<p>可是有的版本安装目录bin下并没有mongo.exe这个文件,需要我们手动下载</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E4%B8%8B%E8%BD%BDshell.PNG" alt="下载shell"></p>
+<p>下载文件是一个压缩包,打开进入bin,把bin目录下的文件解压到本地bin下</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E8%A7%A3%E5%8E%8B.PNG" alt="解压"></p>
+<p>执行mongo.exe,回车</p>
+<p><img src="https://picbed.wuzhentao.com/MongoDBimage/%E7%82%B9%E5%87%BB.PNG" alt="点击"></p>
+<p>自带三个数据库</p>
+<h1 id="python连接MongoDB"><a href="#python连接MongoDB" class="headerlink" title="python连接MongoDB"></a>python连接MongoDB</h1><p><strong>下载python中MongoDB的驱动程序</strong></p>
+<p><code>pip install pymongo</code></p>
+<h2 id="python操作mongodb"><a href="#python操作mongodb" class="headerlink" title="python操作mongodb"></a>python操作mongodb</h2><h3 id="1-连接mongodb"><a href="#1-连接mongodb" class="headerlink" title="1.连接mongodb"></a>1.连接mongodb</h3><p><strong>无需权限认证方式</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line">myclient = pymongo.MongoClient(<span class="string">&quot;mongodb://localhost:27017&quot;</span>)</span><br><span class="line"><span class="comment"># myclient = pymongo.MongoClient(&#x27;localhost&#x27;,27017)</span></span><br><span class="line"><span class="comment"># host = 自己的ip</span></span><br><span class="line"><span class="comment"># myclient = pymongo.MongoClient(host,27017)</span></span><br><span class="line"><span class="built_in">print</span>(myclient.list_database_names())</span><br><span class="line">输出：</span><br><span class="line">[<span class="string">&#x27;admin&#x27;</span>, <span class="string">&#x27;config&#x27;</span>, <span class="string">&#x27;local&#x27;</span>, <span class="string">&#x27;test&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<p><strong>权限认证方式</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pymongo</span><br><span class="line">myclient = pymongo.MongoClient(<span class="string">&#x27;localhost&#x27;</span>, <span class="number">27017</span>)</span><br><span class="line">db = mongo_client.admin</span><br><span class="line">db.authenticate(<span class="string">&#x27;用户名&#x27;</span>, <span class="string">&#x27;密码&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-指定数据库和集合"><a href="#2-指定数据库和集合" class="headerlink" title="2.指定数据库和集合"></a><strong>2.指定数据库和集合</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">获取数据库</span><br><span class="line">方法一：db = client.test</span><br><span class="line">方法二：db = client[<span class="string">&#x27;test&#x27;</span>]</span><br><span class="line">指定集合</span><br><span class="line">方法一：collection = db.stu</span><br><span class="line">方法二：collection = db[<span class="string">&#x27;stu&#x27;</span>]</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-插入数据"><a href="#3-插入数据" class="headerlink" title="3.插入数据"></a><strong>3.插入数据</strong></h3><p>可以使用insert方法插入数据，但在pymongo中，官方推荐使用 <code>insert_one</code> 完成单个数据的写入，<code>insert_many</code> 完成多条数据的插入。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#增加一条</span></span><br><span class="line">stu1=&#123;<span class="string">&#x27;id&#x27;</span>:<span class="string">&#x27;001&#x27;</span>,<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;zhangsan&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">10</span>&#125;</span><br><span class="line">result = collection.insert_one(stu1)</span><br><span class="line"><span class="comment">#增加多条</span></span><br><span class="line">stu2=&#123;<span class="string">&#x27;id&#x27;</span>:<span class="string">&#x27;002&#x27;</span>,<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;lisi&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">15</span>&#125;</span><br><span class="line">stu3=&#123;<span class="string">&#x27;id&#x27;</span>:<span class="string">&#x27;003&#x27;</span>,<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;wangwu&#x27;</span>,<span class="string">&#x27;age&#x27;</span>:<span class="number">20</span>&#125;</span><br><span class="line">result = collection.insert_many([stu2,stu3])</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-删除数据"><a href="#4-删除数据" class="headerlink" title="4.删除数据"></a><strong>4.删除数据</strong></h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#可以直接使用remove方法删除指定的数据</span></span><br><span class="line">result = collection.remove(&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;)</span><br><span class="line"><span class="comment">#使用delete_one()删除一条数据</span></span><br><span class="line">result = collection.delete_one(&#123;<span class="string">&quot;name&quot;</span>:<span class="string">&quot;zhangsan&quot;</span>&#125;)</span><br><span class="line"><span class="comment">#delete_many()删除多条数据</span></span><br><span class="line">result = collection.delete_many(&#123;<span class="string">&quot;age&quot;</span>:&#123;<span class="string">&#x27;$lt&#x27;</span>:<span class="number">20</span>&#125;&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-修改数据"><a href="#5-修改数据" class="headerlink" title="5.修改数据"></a><strong>5.修改数据</strong></h3><p>可以使用update方法修改数据，但在pymongo中，官方推荐使用 <code>update_one</code> 完成单个数据的修改，<code>update_many</code> 完成多条数据的修改。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#update_one,第 2 个参数需要使用$类型操作符作为字典的键名</span></span><br><span class="line"><span class="comment">#姓名为zhangsan的记录，age修改为22</span></span><br><span class="line">condition = &#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;</span><br><span class="line">res = collection.find_one(condition)</span><br><span class="line">res[<span class="string">&#x27;age&#x27;</span>] = <span class="number">22</span></span><br><span class="line">result = collection.update_one(condition, &#123;<span class="string">&#x27;$set&#x27;</span>: res&#125;)</span><br><span class="line"><span class="built_in">print</span>(result) <span class="comment">#返回结果是UpdateResult类型</span></span><br><span class="line"><span class="built_in">print</span>(result.matched_count,result.modified_count) <span class="comment">#获得匹配的数据条数1、影响的数据条数1</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#update_many,所有年龄为15的name修改为xixi</span></span><br><span class="line">condition = &#123;<span class="string">&#x27;age&#x27;</span>: <span class="number">15</span>&#125;</span><br><span class="line">res = collection.find_one(condition)</span><br><span class="line">res[<span class="string">&#x27;age&#x27;</span>] = <span class="number">30</span></span><br><span class="line">result = collection.update_many(condition, &#123;<span class="string">&#x27;$set&#x27;</span>:&#123;<span class="string">&#x27;name&#x27;</span>:<span class="string">&#x27;xixi&#x27;</span>&#125;&#125;)</span><br><span class="line"><span class="built_in">print</span>(result) <span class="comment">#返回结果是UpdateResult类型</span></span><br><span class="line"><span class="built_in">print</span>(result.matched_count,result.modified_count) <span class="comment">#获得匹配的数据条数3、影响的数据条数3</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-查询数据"><a href="#6-查询数据" class="headerlink" title="6.查询数据"></a><strong>6.查询数据</strong></h3><p><strong>find()查找全部数据</strong></p>
+<p>返回所有满足条件的结果，如果条件为空，则返回全部结果，返回结果是一个Cursor游标可迭代对象。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">rets = collection.find(&#123;<span class="string">&quot;age&quot;</span>:<span class="number">20</span>&#125;)，</span><br><span class="line"><span class="keyword">for</span> ret <span class="keyword">in</span> rets:</span><br><span class="line">    <span class="built_in">print</span>(ret)</span><br><span class="line"> <span class="comment"># 查询结果有多少条数据</span></span><br><span class="line"> count = collection.find().count()</span><br><span class="line"> <span class="comment"># 查询结果按年龄升序排序</span></span><br><span class="line">results = collection.find().sort(<span class="string">&#x27;age&#x27;</span>, pymongo.ASCENDING)</span><br><span class="line"><span class="built_in">print</span>([result[<span class="string">&#x27;age&#x27;</span>] <span class="keyword">for</span> result <span class="keyword">in</span> results])</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>1.游标是什么？   </p>
+<p>用来存储多条查询数据的一种数据结构（’结果集’），   它有一个 ‘指针’，从上往下移动（’fetch’），从而能够 ‘遍历每条记录’    </p>
+<p>2.优缺点  </p>
+<p>(1) 提高 sql ‘执行效率’   </p>
+<p>(2) 牺牲 ‘内存’</p>
+</blockquote>
+<p><strong>find_one()查找一条数据</strong></p>
+<p>接收一个字典形式的条件，返回字典形式的整条数据，如果条件为空，则返回第一条。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ret =collection.find_one(&#123;<span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;zhangsan&#x27;</span>&#125;)</span><br></pre></td></tr></table></figure>
+
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Abstract1on</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="http://example.com/post/0.html">http://example.com/post/0.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="http://example.com" target="_blank">Abstract1on的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://picbed.wuzhentao.com/%E5%90%8E%E8%97%A4/p1.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i> 打赏</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/img/wechat.jpg" target="_blank"><img class="post-qr-code-img" src="/img/wechat.jpg" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li><li class="reward-item"><a href="/img/alipay.jpg" target="_blank"><img class="post-qr-code-img" src="/img/alipay.jpg" alt="alipay"/></a><div class="post-qr-code-desc">alipay</div></li></ul></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/img/hongxia2.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Abstract1on</div><div class="author-info__description">バンド</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">22</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">6</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://haiyong.site/moyu/"><i class="iconfont icon-youxishoubing"></i><span>摸鱼</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/AK2TAO" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:1023217219@qq.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><b><font color="#e66b6d">双</font> <font color="#e66d98">手</font> <font color="#e66cc6">合</font> <font color="#cc6de6">十</font> <font color="#9770e6">成</font> <font color="#6d93e6">为</font> <font color="#6fcde6">自</font> <font color="#72e6b6">己</font> <font color="#72e689">的</font> <font color="#99e670">神</font>, <font color="#cde670">自</font> <font color="#e6df72">己</font> <font color="#e6c073">所</font> <font color="#e6a271">信</font> <font color="#e6796f">念</font> <font color="#e65454">的</font> <font color="#e63333">即</font> <font color="#e62c2c">是</font> <font color="#e60101">信</font> <font color="#e60101">仰</font></b> <p align="center"><img src="https://img-blog.csdnimg.cn/f7384c88956d4378b72e47548e19c9f8.gif" width="50" alt="mao"></p> <p align="center">微信号：w1023217219</p> <p align="center">QQ号：1023217219</p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#MongoDB-%E6%95%99%E7%A8%8B"><span class="toc-number">1.</span> <span class="toc-text">MongoDB 教程</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#MongoDB%E7%AE%80%E4%BB%8B"><span class="toc-number">1.1.</span> <span class="toc-text">MongoDB简介</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#window%E5%AE%89%E8%A3%85MongoDB"><span class="toc-number">2.</span> <span class="toc-text">window安装MongoDB</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#python%E8%BF%9E%E6%8E%A5MongoDB"><span class="toc-number">3.</span> <span class="toc-text">python连接MongoDB</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#python%E6%93%8D%E4%BD%9Cmongodb"><span class="toc-number">3.1.</span> <span class="toc-text">python操作mongodb</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-%E8%BF%9E%E6%8E%A5mongodb"><span class="toc-number">3.1.1.</span> <span class="toc-text">1.连接mongodb</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-%E6%8C%87%E5%AE%9A%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E9%9B%86%E5%90%88"><span class="toc-number">3.1.2.</span> <span class="toc-text">2.指定数据库和集合</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.3.</span> <span class="toc-text">3.插入数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-%E5%88%A0%E9%99%A4%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.4.</span> <span class="toc-text">4.删除数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-%E4%BF%AE%E6%94%B9%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.5.</span> <span class="toc-text">5.修改数据</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-%E6%9F%A5%E8%AF%A2%E6%95%B0%E6%8D%AE"><span class="toc-number">3.1.6.</span> <span class="toc-text">6.查询数据</span></a></li></ol></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/post/0.html" title="无题"><img src="https://picbed.wuzhentao.com/%E5%90%8E%E8%97%A4/p1.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="无题"/></a><div class="content"><a class="title" href="/post/0.html" title="无题">无题</a><time datetime="2023-05-25T13:18:23.320Z" title="发表于 2023-05-25 21:18:23">2023-05-25</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/6b2110a3.html" title="深度分析Jieba"><img src="https://picbed.wuzhentao.com/%E5%87%89/p1.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="深度分析Jieba"/></a><div class="content"><a class="title" href="/post/6b2110a3.html" title="深度分析Jieba">深度分析Jieba</a><time datetime="2023-03-15T12:02:39.319Z" title="发表于 2023-03-15 20:02:39">2023-03-15</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/cf078df3.html" title="python基础部分和numpy简单应用"><img src="https://picbed.wuzhentao.com/%E5%87%89/p4.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="python基础部分和numpy简单应用"/></a><div class="content"><a class="title" href="/post/cf078df3.html" title="python基础部分和numpy简单应用">python基础部分和numpy简单应用</a><time datetime="2023-03-12T11:10:21.789Z" title="发表于 2023-03-12 19:10:21">2023-03-12</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/c049076b.html" title="数学符号及希腊字母"><img src="https://picbed.wuzhentao.com/%E5%85%B6%E4%BB%96/p3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="数学符号及希腊字母"/></a><div class="content"><a class="title" href="/post/c049076b.html" title="数学符号及希腊字母">数学符号及希腊字母</a><time datetime="2023-03-10T12:16:29.717Z" title="发表于 2023-03-10 20:16:29">2023-03-10</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/post/56eaf829.html" title="备份压缩命令"><img src="https://picbed.wuzhentao.com/%E5%87%89/p5.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="备份压缩命令"/></a><div class="content"><a class="title" href="/post/56eaf829.html" title="备份压缩命令">备份压缩命令</a><time datetime="2023-03-09T11:01:10.060Z" title="发表于 2023-03-09 19:01:10">2023-03-09</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2023 By Abstract1on</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div><div class="footer_custom_text">我希望你成为你自己的太阳，不必依靠谁的光。<p><a target="_blank" href="https://hexo.io/"><img src="https://img.shields.io/badge/Frame-Hexo-blue?style=flat&logo=hexo" title="博客框架为Hexo"></a>&nbsp;<a target="_blank" href="https://butterfly.js.org/"><img src="https://img.shields.io/badge/Theme-Butterfly-6513df?style=flat&logo=bitdefender" title="主题采用butterfly"></a>&nbsp;<a target="_blank" href="https://www.jsdelivr.com/"><img src="https://img.shields.io/badge/CDN-jsDelivr-orange?style=flat&logo=jsDelivr" title="本站使用JsDelivr为静态资源提供CDN加速"></a> &nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Vervel-brightgreen?style=flat&logo=Vercel" title="本站采用双线部署，默认线路托管于Vercel"></a>&nbsp;<a target="_blank" href="https://vercel.com/ "><img src="https://img.shields.io/badge/Hosted-Coding-0cedbe?style=flat&logo=Codio" title="本站采用双线部署，联通线路托管于Coding"></a>&nbsp;<a target="_blank" href="https://github.com/"><img src="https://img.shields.io/badge/Source-Github-d021d6?style=flat&logo=GitHub" title="本站项目由Gtihub托管"></a>&nbsp;<a target="_blank" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/Copyright-BY--NC--SA%204.0-d42328?style=flat&logo=Claris" title="本站采用知识共享署名-非商业性使用-相同方式共享4.0国际许可协议进行许可"></a></p></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div><!-- hexo injector body_end start --><script data-pjax>
+  function butterfly_clock_anzhiyu_injector_config(){
+    var parent_div_git = document.getElementsByClassName('sticky_layout')[0];
+    var item_html = '<div class="card-widget card-clock"><div class="card-glass"><div class="card-background"><div class="card-content"><div id="hexo_electric_clock"><img class="entered loading" id="card-clock-loading" src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/loading.gif" style="height: 120px; width: 100%;" data-ll-status="loading"/></div></div></div></div></div>';
+    console.log('已挂载butterfly_clock_anzhiyu')
+    if(parent_div_git) {
+      parent_div_git.insertAdjacentHTML("afterbegin",item_html)
+    }
+  }
+  var elist = 'null'.split(',');
+  var cpage = location.pathname;
+  var epage = '/';
+  var qweather_key = 'b16a1fa0e63c46a4b8f28abfb06ae3fe';
+  var gaud_map_key = 'e2b04289e870b005374ee030148d64fd&s=rsv3';
+  var baidu_ak_key = 'undefined';
+  var flag = 0;
+  var clock_rectangle = '113.34532,23.15624';
+  var clock_default_rectangle_enable = 'false';
+
+  for (var i=0;i<elist.length;i++){
+    if (cpage.includes(elist[i])){
+      flag++;
+    }
+  }
+
+  if ((epage ==='all')&&(flag == 0)){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  else if (epage === cpage){
+    butterfly_clock_anzhiyu_injector_config();
+  }
+  </script><script src="https://widget.qweather.net/simple/static/js/he-simple-common.js?v=2.0"></script><script data-pjax src="https://cdn.cbd.int/hexo-butterfly-clock-anzhiyu/lib/clock.min.js"></script><!-- hexo injector body_end end --></body></html>
